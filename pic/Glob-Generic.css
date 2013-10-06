@@ -1,0 +1,583 @@
+/*
+ * Colour dictionary:
+ *
+ * Table control elements:   #719ba7
+ * Header cells:             #66A9BD
+ * Body header cells:        #91c5d4
+ * Body content cells:       #d5eaf0
+ * Body content cells (alt): #bcd9e1
+ * Footer header:            #b0cc7f
+ * Footer content:           #d7e1c5
+ */
+
+
+/*
+ * Page setup styles
+ */
+body {
+    font: 75%/1.30em Arial, Verdana, Helvetica, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    color: #111;
+    background-color: #fff;
+}
+
+#container {
+    margin: 0 auto;
+    width: 960px
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+#loading-image {
+background:transparent url(images/3.gif) no-repeat center center;
+zbackground-color: #333;
+width: 55px;
+height: 55px;
+zposition: fixed;
+ztop: 20px;
+zright: 20px;
+z-index: 1;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px; /* future proofing */
+-khtml-border-radius: 10px;
+}
+
+#dvLoading {background:transparent url(images/3.gif) no-repeat center center;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 80px;
+    margin: -25px 0 0 -25px;
+}
+
+.Spacer-10 {height: 10px; clear: both;}
+.Spacer-15 {height: 15px; clear: both;}
+.Spacer-20 {height: 20px; clear: both;}
+.Spacer-25 {height: 25px; clear: both;}
+.Spacer-30 {height: 30px; clear: both;}
+.Spacer-35 {height: 35px; clear: both;}
+.Spacer-40 {height: 40px; clear: both;}
+.Spacer-45 {height: 45px; clear: both;}
+.Spacer-50 {height: 50px; clear: both;}
+
+/*Data Tables - */
+
+.column1 {width: 230px;}
+.column2 {width: 80px;}
+.column3 {width: 80px;}
+.column4 {width: 80px;}
+.column5 {width: 100px;}
+.column6 {width: 300px;}
+.column7 {width: 100px;}
+.column8 {width: 80px;}
+.column9 {width: 40px;}
+.column10 {width: 100px;}
+.column11 {width: 100px;}
+.column12 {width: 100px;}
+.column13 {width: 100px;}
+.column14 {width: 100px;}
+.column15 {width: 100px;}
+.column16 {width: 100px;}
+.column17 {width: 100px;}
+.column18 {width: 100px;}
+.column19 {width: 100px;}
+.column20 {width: 300px;}
+.column21 {width: 150px;}
+.column22 {width: 100px;}
+.column23 {width: 100px;}
+.column24 {width: 100px;}
+.column25 {width: 150px;}
+.column26 {width: 100px;}
+.column27 {width: 100px;}
+.column28 {width: 100px;}
+.column29 {width: 150px;}
+.column30 {width: 100px;}
+.column31 {width: 100px;}
+.column32 {width: 100px;}
+.column33 {width: 150px;}
+.column34 {width: 100px;}
+.column35 {width: 100px;}
+.column36 {width: 100px;}
+.column37 {width: 150px;}
+.column38 {width: 100px;}
+.column39 {width: 100px;}
+.column40 {width: 100px;}
+.column41 {width: 100px;}
+.column42 {width: 100px;}
+.column43 {width: 100px;}
+.column44 {width: 100px;}
+.column45 {width: 100px;}
+.column46 {width: 100px;}
+.column47 {width: 100px;}
+.column48 {width: 100px;}
+.column49 {width: 100px;}
+
+
+
+/* Generic Table Layou controls */
+#Table-Displayer-Scrolling{ width:960px; border:solid 0px #000; margin: 0px 5px 0px 5px;}
+#Table-Displayer-Issued{ width:2000px; border:solid 0px #000;}
+#Table-Displayer-Closed{ width:2000px; border:solid 0px #000;}
+#Table-Displayer-Pending{ width:5220px; border:solid 0px #000;}
+
+table.GenericTitle td {border-left:none; border-collapse: collapse; padding: 10px 15px 0px 5px; color:black; font-size:12.0pt; font-style:normal; text-decoration:none; font-family:Tahoma, sans-serif; }
+table.GenericTitle p {margin: 10px 0 0px 0; }
+table.GenericTitle .Report-Run-Time {margin: 0px 0 10px 0; font-size:9.0pt;  }
+
+table.Generic{width:100%; padding: 0px; clear: both; margin: 0px 5px 0px 5px;}
+table.Generic thead th, table.Generic tbody td {color:black; font-style:normal; text-decoration:none; font-family:Tahoma, sans-serif; }
+table.Generic thead th {cursor: pointer; * cursor: hand; font-size:7.5pt; border-collapse: collapse; border:1.0pt solid #608BB4; border-left:none; padding: 2px 2px 2px 2px; background:#BFD2E2; white-space:nowrap; font-weight:bold; text-align:center;}
+table.Generic tbody td {font-size:8.0pt; border:1.0pt solid #CCCCCC; border-collapse: collapse; border-left:none; padding: 2px 5px 2px 2px; white-space:nowrap; font-weight:normal; text-align:left; }
+
+
+table.Generic thead th.Case-Client {zwidth: 250px; border-left:1.0pt solid #608BB4; text-align:left;}
+table.Generic thead th.Case-Number {max-width: 100px; }
+table.Generic thead th.Case-Type {max-width: 80px; }
+table.Generic thead th.Case-State {max-width: 80px; }
+table.Generic thead th.Case-Date {max-width: 100px;}
+table.Generic thead th.Case-Product {zwidth: 250px;}
+table.Generic thead th.Case-Deposit-Amount {zwidth: 100px;}
+table.Generic thead th.Case-Suitability {zwidth: 100px;}
+table.Generic thead th.Case-IGO {zwidth: 40px;}
+table.Generic thead th.Case-NIGO1 {zwidth: 100px;}
+table.Generic thead th.Case-NIGO1-Date {zwidth: 100px;}
+table.Generic thead th.Case-NIGO2 {zwidth: 100px;}
+table.Generic thead th.Case-NIGO2-Date {zwidth: 100px;}
+table.Generic thead th.Case-NIGO3 {zwidth: 100px;}
+table.Generic thead th.Case-NIGO3-Date {zwidth: 100px;}
+table.Generic thead th.Case-NIGO4 {zwidth: 100px;}
+table.Generic thead th.Case-NIGO4-Date {zwidth: 100px;}
+table.Generic thead th.Case-NIGO5 {zwidth: 100px;}
+table.Generic thead th.Case-NIGO5-Date {zwidth: 100px;}
+table.Generic thead th.Case-NIGO-Notes {zwidth: 300px;}
+table.Generic thead th.Case-Transfer1-Company {zwidth: 150px;}
+table.Generic thead th.Case-Transfer1-Amount {zwidth: 100px;}
+table.Generic thead th.Case-Transfer1-Date-Requested {zwidth: 100px;}
+table.Generic thead th.Case-Transfer1-Date-Received {zwidth: 100px;}
+table.Generic thead th.Case-Transfer2-Company {zwidth: 150px;}
+table.Generic thead th.Case-Transfer2-Amount {zwidth: 100px;}
+table.Generic thead th.Case-Transfer2-Date-Requested {zwidth: 100px;}
+table.Generic thead th.Case-Transfer2-Date-Received {zwidth: 100px;}
+table.Generic thead th.Case-Transfer3-Company {zwidth: 150px;}
+table.Generic thead th.Case-Transfer3-Amount {zwidth: 100px;}
+table.Generic thead th.Case-Transfer3-Date-Requested {zwidth: 100px;}
+table.Generic thead th.Case-Transfer3-Date-Received {zwidth: 100px;}
+table.Generic thead th.Case-Transfer4-Company {zwidth: 150px;}
+table.Generic thead th.Case-Transfer4-Amount {zwidth: 100px;}
+table.Generic thead th.Case-Transfer4-Date-Requested {zwidth: 100px;}
+table.Generic thead th.Case-Transfer4-Date-Received {zwidth: 100px;}
+table.Generic thead th.Case-Transfer5-Company {zwidth: 150px;}
+table.Generic thead th.Case-Transfer5-Amount {zwidth: 100px;}
+table.Generic thead th.Case-Transfer5-Date-Requested {zwidth: 100px;}
+table.Generic thead th.Case-Transfer5-Date-Received {zwidth: 100px;}
+table.Generic thead th.Case-Sales1-Level {zwidth: 150px;}
+table.Generic thead th.Case-Sales2-Level {zwidth: 150px;}
+table.Generic thead th.Case-Sales3-Level {zwidth: 150px;}
+table.Generic thead th.Case-Producer1-Name {zwidth: 150px;}
+table.Generic thead th.Case-Producer1-Code {zwidth: 100px;}
+table.Generic thead th.Case-Producer2-Name {zwidth: 150px;}
+table.Generic thead th.Case-Producer2-Code {zwidth: 100px;}
+table.Generic thead th.Case-Producer3-Name {zwidth: 150px;}
+table.Generic thead th.Case-Producer3-Code {zwidth: 100px;}
+
+table.Generic tbody td.Case-Client {border-left:1.0pt solid #CCCCCC; text-align:left;}
+table.Generic tbody td.Case-Number {text-align: center;}
+table.Generic tbody td.Case-Type {text-align: center;}
+table.Generic tbody td.Case-State {text-align: left;}
+table.Generic tbody td.Case-Date {text-align: center;}
+table.Generic tbody td.Case-Product {text-align: left;}
+table.Generic tbody td.Case-Deposit-Amount {text-align: right; padding-right:10px;}
+table.Generic tbody td.Case-Suitability {zwidth: 100px; text-align: center;}
+table.Generic tbody td.Case-IGO {zwidth: 40px; text-align: center;}
+table.Generic tbody td.Case-NIGO1 {zwidth: 100px;}
+table.Generic tbody td.Case-NIGO1-Date {zwidth: 100px;}
+table.Generic tbody td.Case-NIGO2 {zwidth: 100px;}
+table.Generic tbody td.Case-NIGO2-Date {zwidth: 100px;}
+table.Generic tbody td.Case-NIGO3 {zwidth: 100px;}
+table.Generic tbody td.Case-NIGO3-Date {zwidth: 100px;}
+table.Generic tbody td.Case-NIGO4 {zwidth: 100px;}
+table.Generic tbody td.Case-NIGO4-Date {zwidth: 100px;}
+table.Generic tbody td.Case-NIGO5 {zwidth: 100px;}
+table.Generic tbody td.Case-NIGO5-Date {zwidth: 100px;}
+table.Generic tbody td.Case-NIGO-Notes {zwidth: 300px;}
+table.Generic tbody td.Case-Transfer1-Company {}
+table.Generic tbody td.Case-Transfer1-Amount {}
+table.Generic tbody td.Case-Transfer1-Date-Requested {}
+table.Generic tbody td.Case-Transfer1-Date-Received {}
+table.Generic tbody td.Case-Transfer2-Company {}
+table.Generic tbody td.Case-Transfer2-Amount {}
+table.Generic tbody td.Case-Transfer2-Date-Requested {}
+table.Generic tbody td.Case-Transfer2-Date-Received {}
+table.Generic tbody td.Case-Transfer3-Company {}
+table.Generic tbody td.Case-Transfer3-Amount {}
+table.Generic tbody td.Case-Transfer3-Date-Requested {}
+table.Generic tbody td.Case-Transfer3-Date-Received {}
+table.Generic tbody td.Case-Transfer4-Company {}
+table.Generic tbody td.Case-Transfer4-Amount {}
+table.Generic tbody td.Case-Transfer4-Date-Requested {}
+table.Generic tbody td.Case-Transfer4-Date-Received {}
+table.Generic tbody td.Case-Transfer5-Company {}
+table.Generic tbody td.Case-Transfer5-Amount {}
+table.Generic tbody td.Case-Transfer5-Date-Requested {}
+table.Generic tbody td.Case-Transfer5-Date-Received {}
+table.Generic tbody td.Case-Sales1-Level {}
+table.Generic tbody td.Case-Sales2-Level {}
+table.Generic tbody td.Case-Sales3-Level {}
+table.Generic tbody td.Case-Producer1-Name {}
+table.Generic tbody td.Case-Producer1-Code {text-align: center;}
+table.Generic tbody td.Case-Producer2-Name {}
+table.Generic tbody td.Case-Producer2-Code {text-align: center;}
+table.Generic tbody td.Case-Producer3-Name {}
+table.Generic tbody td.Case-Producer3-Code {text-align: center;}
+
+
+
+/* Prefix dollar amounts */
+table.Generic tbody td.Case-Deposit-Amount:before { content: "$";}
+table.Generic tbody td.Case-Transfer1-Amount:before { content: "$";}
+table.Generic tbody td.Case-Transfer2-Amount:before { content: "$";}
+table.Generic tbody td.Case-Transfer3-Amount:before { content: "$";}
+table.Generic tbody td.Case-Transfer4-Amount:before { content: "$";}
+table.Generic tbody td.Case-Transfer5-Amount:before { content: "$";}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables features
+ */
+
+div.dataTables_wrapper {
+    position: relative;
+    border: dotted 0px #FF0040;
+    clear: both;
+    margin-bottom:0px;
+    zoom: 1; /* Feeling sorry for IE */
+}
+
+.dataTables_processing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 30px;
+    margin-left: -125px;
+    margin-top: -15px;
+    padding: 14px 0 2px 0;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    background-color: white;
+}
+
+div.dataTables_length {
+    float: left;
+    background-color: #fff;
+}
+ 
+div.dataTables_filter {
+    float: right;
+    background-color: #fff;
+}
+ 
+div.dataTables_info {
+    float: left;
+    background-color: #fff;
+    padding: 20px 6px 6px 6px;
+    top-margin:20px;
+}
+ 
+div.dataTables_paginate {
+    float: right;
+    text-align: right;
+    background-color: #fff;
+    border: solid 0px #000;
+    margin-top: 20px 6px 6px 6px;
+}
+ 
+div.dataTables_length,
+div.dataTables_filter,
+div.dataTables_paginate,
+div.dataTables_info {
+    padding: 0px;
+}
+
+
+/* Pagination nested */
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+table.Generic thead th.sorting_asc {
+    background: #BFD2E2 url('images/black_sort_asc.png') no-repeat right center;
+}
+ 
+table.Generic thead th.sorting_desc {
+    background: #BFD2E2 url('images/black_sort_desc.png') no-repeat right center;
+}
+ 
+table.Generic thead th.sorting {
+    background: #BFD2E2 url('images/black_sort_both.png') no-repeat right center;
+}
+
+table.Generic thead th.sorting_asc_disabled {
+    background: url('images/sort_asc_disabled.png') no-repeat center right;
+}
+
+table.Generic thead th.sorting_desc_disabled {
+    background: url('images/sort_desc_disabled.png') no-repeat center right;
+}
+
+table.Generic thead th:active,
+table.Generic thead td:active {
+    outline: none;
+}
+
+
+.paging_full_numbers {
+    margin-top:10px;
+}
+
+a.paginate_button,
+a.paginate_active {
+    display: inline-block;
+    background-color: #BFD2E2;
+    padding: 2px 6px;
+    margin-left: 2px;
+    cursor: pointer;
+    *cursor: hand;
+}
+ 
+a.paginate_active {
+    background-color: transparent;
+    border: 1px solid black;
+}
+ 
+a.paginate_button_disabled {
+    color: #3d6672;
+}
+.paging_full_numbers a:active {
+    outline: none
+}
+.paging_full_numbers a:hover {
+    text-decoration: none;
+}
+ 
+div.dataTables_paginate span>a {
+    width: 15px;
+    text-align: center;
+}
+ 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Misc
+ */
+.dataTables_scroll {
+    clear: both;
+}
+
+.dataTables_scrollBody {
+    *margin-top: -1px;
+    border: solid 0px #000;
+    -webkit-overflow-scrolling: touch;
+}
+
+.top, .bottom {
+    padding: 15px;
+    background-color: #F5F5F5;
+    border: 1px solid #CCCCCC;
+}
+
+.top .dataTables_info {
+    float: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.dataTables_empty {
+    text-align: center;
+    
+}
+
+tfoot input {
+    margin: 0.5em 0;
+    width: 80%;
+    color: #444;
+    display: inline-block;
+    float: left;
+}
+
+tfoot input.search_init {
+    width:80%;
+    color: #999;
+}
+
+td.group {
+    background-color: #d1cfd0;
+    border-bottom: 2px solid #A19B9E;
+    border-top: 2px solid #A19B9E;
+}
+
+/* Detail container */
+td.details { background-color: #ffedd5; border: 0px solid #A19B9E; padding-left:50px;}
+/* Detail display */
+
+table.Details-Display{
+    border-collapse: collapse;
+    background-color: #fff2df;
+    border: 1px solid #a67d45;
+    padding: 10px;
+    margin-left:25px;
+    color: #fff;
+}
+
+table.Details-Display td.Title{
+    background-color: #bfd2e2;
+    padding: 2px;
+    color: #000;
+    min-width: 50px;
+}
+
+table.Details-Display td.Value{
+    background-color: #dce7f1;
+    padding: 2px;
+    color: #000;
+    min-width: 200px;
+}
+table.Details-Display td.Grouping{
+    background-color: #dce7f1;
+    padding: 2px;
+    color: #000;
+    cursor: pointer;
+    min-width: 200px;
+}
+table.Details-Display td.Empty-Cell{
+    border: none;
+}
+
+
+/* Large rounded pagination */
+
+z.example_alt_pagination div.dataTables_info {
+    width: 40%;
+}
+
+z.paging_full_numbers {
+    width: 400px;
+    height: 22px;
+    line-height: 22px;
+    margin-top:10px;
+}
+
+z.paging_full_numbers a:active {
+    outline: none
+}
+
+z.paging_full_numbers a:hover {
+    text-decoration: none;
+}
+
+z.paging_full_numbers a.paginate_button,
+    .paging_full_numbers a.paginate_active {
+    border: 1px solid #aaa;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 2px 5px;
+    margin: 0 3px;
+    cursor: pointer;
+    *cursor: hand;
+    color: #333 !important;
+}
+
+z.paging_full_numbers a.paginate_button {
+    background-color: #ddd;
+}
+
+z.paging_full_numbers a.paginate_button:hover {
+    background-color: #ccc;
+    text-decoration: none !important;
+}
+
+z.paging_full_numbers a.paginate_active {
+    background-color: #99B3FF;
+}
+
+
+
+
+
+table.display tr.even.row_selected td {
+    background-color: #B0BED9;
+}
+
+table.display tr.odd.row_selected td {
+    background-color: #9FAFD1;
+}
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables row classes
+ */
+table.Generic tr.odd.gradeA {
+    background-color: #ddffdd;
+}
+
+table.Generic tr.even.gradeA {
+    background-color: #eeffee;
+}
+
+table.Generic tr.odd.gradeC {
+    background-color: #ddddff;
+}
+
+table.Generic tr.even.gradeC {
+    background-color: #eeeeff;
+}
+
+table.Generic tr.odd.gradeX {
+    background-color: #ffdddd;
+}
+
+table.Generic tr.even.gradeX {
+    background-color: #ffeeee;
+}
+
+table.Generic tr.odd.gradeU {
+    background-color: #ddd;
+}
+
+table.Generic tr.even.gradeU {
+    background-color: #eee;
+}
+
+
+table.Generic tr.odd {
+    background-color: #E2E4FF;
+}
+
+table.Generic tr.even {
+    background-color: white;
+}
+
+
+
+
+table.Generic tr.odd.RAWLINGS {
+    background-color: #ddd;
+}
+
+table.Generic tr.even.RAWLINGS {
+    background-color: #eee;
+}

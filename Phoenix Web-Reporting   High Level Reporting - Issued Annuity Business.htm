@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0079)https://wmqa.phl.com/Web-Reporting/Web-Reporting-Prototypes/Annuity-Pending.jsp -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="UTF-8">
+<meta name="keywords" content="keywords descriptions go here">
+<meta name="description" content="Page descriptions go here ">
+<link rel="shortcut icon" type="image/x-icon" href="https://wmqa.phl.com/Web-Reporting/favicon.ico">
+<title>Phoenix Web-Reporting | High Level Reporting - Issued Annuity Business</title>
+
+<link rel="stylesheet" type="text/css" media="all" href="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/reset.css">
+<link rel="stylesheet" type="text/css" media="all" href="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/940-12-20.css">
+<link rel="stylesheet" type="text/css" media="all" href="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/FrameWork-Master.css">
+<link rel="stylesheet" type="text/css" media="all" href="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/Site-Navi-Menu.css">
+<link rel="stylesheet" type="text/css" media="all" href="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/Section-Navi.css">
+<link rel="stylesheet" type="text/css" media="all" href="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/Apps-Forms.css">
+<link rel="stylesheet" type="text/css" media="all" href="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/FrameWork-Partner.css">
+<!-- Pull Down Panel -->
+<link rel="stylesheet" type="text/css" media="all" href="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/Pull-Down-Panel.css">
+<!-- Web Reporting  -->
+<link rel="stylesheet" type="text/css" media="all" href="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/Web-Reporting.css">
+<!-- DataTables -->
+<link rel="stylesheet" type="text/css" href="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/Glob-Generic.css">
+<link rel="stylesheet" type="text/css" media="all" href="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/TableTools.css">
+<link rel="stylesheet" type="text/css" media="all" href="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/ColumnFilterWidgets.css">
+<!-- ToolTips -->
+<link rel="stylesheet" href="https://wmqa.phl.com/shared/jslibraries/jquery/UI/css/jquery-ui.css">
+<script type="text/javascript" charset="utf-8" language="javascript" src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/query-ui-tabs.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/ZeroClipboard.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/TableTools.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/dataTables.numericComma.js"></script>
+<script type="text/javascript" language="javascript" src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/ColumnFilterWidgets.js"></script>
+<script type="text/javascript" charset="utf-8" language="javascript" src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/jquery.sparkline.js"></script>
+<script src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/jquery-ui.js"></script>
+<script type="text/javascript" src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/highcharts.js"></script>
+<script type="text/javascript" src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/exporting.js"></script>
+<script type="text/javascript" src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/Chart.min.js"></script>
+
+
+<script>
+$(window).load(function(){
+  $('#dvLoading').fadeOut(2000);
+});
+
+jQuery(window).load(function() {
+  jQuery('#loading-image').hide();
+});
+
+$(function() {
+    $( document ).tooltip();
+  });
+
+</script>
+<style>
+body{ background-color: #6CABE7;}
+</style>
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<body>
+<
+<!-- End Charts -->
+
+<div class="grid_12 ContentBody">
+<!-- Start Engines -->
+<script>
+  var asInitVals = new Array();
+
+            /* Formating function for row details */
+            function fnFormatDetails ( oTable, nTr )
+            {
+                var aData = oTable.fnGetData( nTr );
+                var sOut = '<table cellspacing="0" class="Details-Display">';
+                sOut += '<tr><td class="Title">Suitability:</td><td class="Value">'+aData[8]+'</td><td class="Title">IGO:</td><td class="Value">'+aData[9]+'</td><td class="Empty-Cell" colspan="4"></td></tr>';
+                sOut += '<tr><td class="Grouping" colspan="8">INGO Information</td></tr>';
+
+                sOut += '<tr><td class="Title">INGO 1:</td><td class="Value">'+aData[10]+'</td><td class="Title">Resloved:</td><td class="Value">'+aData[11]+'</td><td class="Title">INGO 2:</td><td class="Value">'+aData[12]+'</td><td class="Title">Resloved:</td><td class="Value">'+aData[13]+'</td></tr>';
+                sOut += '<tr><td class="Title">INGO 3:</td><td class="Value">'+aData[14]+'</td><td class="Title">Resloved:</td><td class="Value">'+aData[15]+'</td><td class="Title">INGO 4:</td><td class="Value">'+aData[16]+'</td><td class="Title">Resloved:</td><td class="Value">'+aData[17]+'</td></tr>';
+                sOut += '<tr><td class="Title">INGO 5:</td><td class="Value">'+aData[18]+'</td><td class="Title">Resloved:</td><td class="Value">'+aData[19]+'</td><td class="Title"></td><td class="Value"></td><td class="Title"></td><td class="Value"></td></tr>';
+                sOut += '<tr><td class="Title">INGO Note:</td><td class="Value" colspan="7">'+aData[20]+'</td></tr>';
+
+
+                sOut += '<tr><td class="Grouping" colspan="8">Transfer Company Info</td></tr>';
+                sOut += '<tr><td class="Title">Company 1</td><td class="Value">'+aData[21]+'</td><td class="Title">Amount:</td><td class="Value">'+aData[22]+'</td><td class="Title">Requested:</td><td class="Value">'+aData[23]+'</td><td class="Title">Received:</td><td class="Value">'+aData[24]+'</td></tr>';
+                sOut += '<tr><td class="Title">Company 2</td><td class="Value">'+aData[25]+'</td><td class="Title">Amount:</td><td class="Value">'+aData[26]+'</td><td class="Title">Requested:</td><td class="Value">'+aData[27]+'</td><td class="Title">Received:</td><td class="Value">'+aData[28]+'</td></tr>';
+                sOut += '<tr><td class="Title">Company 3</td><td class="Value">'+aData[29]+'</td><td class="Title">Amount:</td><td class="Value">'+aData[30]+'</td><td class="Title">Requested:</td><td class="Value">'+aData[31]+'</td><td class="Title">Received:</td><td class="Value">'+aData[32]+'</td></tr>';
+                sOut += '<tr><td class="Title">Company 4</td><td class="Value">'+aData[33]+'</td><td class="Title">Amount:</td><td class="Value">'+aData[34]+'</td><td class="Title">Requested:</td><td class="Value">'+aData[35]+'</td><td class="Title">Received:</td><td class="Value">'+aData[36]+'</td></tr>';
+                sOut += '<tr><td class="Title">Company 5</td><td class="Value">'+aData[37]+'</td><td class="Title">Amount:</td><td class="Value">'+aData[38]+'</td><td class="Title">Requested:</td><td class="Value">'+aData[39]+'</td><td class="Title">Received:</td><td class="Value">'+aData[40]+'</td></tr>';
+
+               sOut += '<tr><td class="Grouping" colspan="8">Sales Level</td></tr>';
+ 
+
+
+                sOut += '<tr><td class="Title">Level 1:</td><td class="Value">'+aData[40]+'</td><td class="Title">Producer:</td><td class="Value">'+aData[43]+'</td><td class="Title">Code:</td><td class="Value">'+aData[44]+'</td><td class="Empty-Cell"colspan="2"></td></tr>';
+                sOut += '<tr><td class="Title">Level 1:</td><td class="Value">'+aData[41]+'</td><td class="Title">Producer:</td><td class="Value">'+aData[45]+'</td><td class="Title">Code:</td><td class="Value">'+aData[46]+'</td><td class="Empty-Cell"colspan="2"></td></tr>';
+                sOut += '<tr><td class="Title">Level 1:</td><td class="Value">'+aData[42]+'</td><td class="Title">Producer:</td><td class="Value">'+aData[47]+'</td><td class="Title">Code:</td><td class="Value">'+aData[48]+'</td><td class="Empty-Cell"colspan="2"></td></tr>';
+                sOut += '</table>';
+                
+                return sOut;
+            }
+            
+            $(document).ready(function() {
+                /*
+                 * Insert a 'details' column to the table
+                 */
+                var nCloneTh = document.createElement( 'th' );
+                var nCloneTd = document.createElement( 'td' );
+                var nCloneFd = document.createElement( 'td' );
+                nCloneTh.innerHTML = 'More';
+                nCloneTd.innerHTML = '<img src="css/images/details_open.png">';
+                nCloneTd.className = "center";
+                nCloneFd.innerHTML = '<input type="text" name="search_client" value="B" class="search_init" style="width:10px; display:none;"/>';
+                
+                $('#Pending thead tr').each( function () {
+                    this.insertBefore( nCloneTh, this.childNodes[0] );
+                } );
+                
+                $('#Pending tbody tr').each( function () {
+                    this.insertBefore(  nCloneTd.cloneNode( true ), this.childNodes[0] );
+                } );
+                
+                $('#Pending tfoot tr').each( function () {
+                    this.insertBefore(  nCloneFd.cloneNode( true ), this.childNodes[0] );
+                } );
+                
+
+      
+               /*
+                 * Initialse DataTables, with no sorting on the 'details' column
+                 */
+        var oTable = $('#Pending').dataTable( {
+            "sDom": 'T<"clear">lfrtip',
+            "oTableTools": { 
+                            "sSwfPath": "/shared/DataTables/extras/TableTools-2.1.5/media/swf/copy_csv_xls_pdf.swf",
+                            "aButtons": [{"sExtends": "copy", "sButtonText": "Copy"}, {"sExtends": "xls", "sButtonText": "Save for Excel"}]
+                            },         
+              "zsScrollY": "450px",
+              "zsScrollXInner": "110%",
+              "bScrollCollapse": true,
+              "bPaginate": true,
+              "sPaginationType": "full_numbers",
+              "bLengthChange": true,
+              "iDisplayLength": 10,
+              "aLengthMenu": [[12, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, -1], [25, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, "All"]],
+              "oLanguage": {
+              "sSearch": "Filter all columns:"
+                      },
+              "aaSorting": [[1,'asc']],
+              "aoColumnDefs": [
+                  { "bSortable": false, "aTargets": [ 0 ] },
+                  { "bVisible": false, "aTargets": [ 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49] } 
+                ],
+              "aoColumns": [null,null,{ "sType": "formatted-num" },null,null,null,null,{ "sType": "formatted-num" },null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
+
+       } );
+
+               
+                /* Add event listener for opening and closing details
+                 * Note that the indicator for showing which row is open is not controlled by DataTables,
+                 * rather it is done here
+                 */
+                $('#Pending tbody td img').live('click', function () {
+                    var nTr = $(this).parents('tr')[0];
+                    if ( oTable.fnIsOpen(nTr) )
+                    {
+                        /* This row is already open - close it */
+                        this.src = "css/images/details_open.png";
+                        oTable.fnClose( nTr );
+                    }
+                    else
+                    {
+                        /* Open this row */
+                        this.src = "css/images/details_close.png";
+                        oTable.fnOpen( nTr, fnFormatDetails(oTable, nTr), 'details' );
+                    }
+                } );
+
+    } );
+
+</script>
+<!-- End Engines -->
+
+
+
+<table cellspacing="0" class="GenericTitle">
+  <tbody><tr>
+      <td>
+        <p>Annuity Pending Business Report as of May 30, 2013</p>
+        <p class="Report-Run-Time">Run Date: May 31, 2013 at 4:03:33 AM</p>
+      </td>
+  </tr>
+</tbody></table>
+  <!-- Start Annuity Reporting Navi
+      <zjsp:include page="/Web-Reporting/Web-Reporting-Prototypes/Components-Layouts/Nav-Annuity-Reports.jsp" flush="true" />
+  End Annuity Reporting Navi -->
+
+<!-- Start Report Display -->
+<!-- Start Table Format -->
+<div id="Pending_wrapper" class="dataTables_wrapper" role="grid"><div class="DTTT_container"><a class="DTTT_button DTTT_button_copy" id="ToolTables_Pending_0"><span>Copy</span><div style="position: absolute; left: 0px; top: 0px; width: 46px; height: 29px; z-index: 99;"><embed id="ZeroClipboard_TableToolsMovie_1" src="/shared/DataTables/extras/TableTools-2.1.5/media/swf/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="46" height="29" name="ZeroClipboard_TableToolsMovie_1" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=46&amp;height=29" wmode="transparent"></div></a><a class="DTTT_button DTTT_button_xls" id="ToolTables_Pending_1"><span>Save for Excel</span><div style="position: absolute; left: 0px; top: 0px; width: 96px; height: 29px; z-index: 99;"><embed id="ZeroClipboard_TableToolsMovie_2" src="/shared/DataTables/extras/TableTools-2.1.5/media/swf/copy_csv_xls_pdf.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="96" height="29" name="ZeroClipboard_TableToolsMovie_2" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=2&amp;width=96&amp;height=29" wmode="transparent"></div></a></div><div class="clear"></div><div class="dataTables_filter" id="Pending_filter"><label>Filter all columns: <input type="text" aria-controls="Pending"></label></div><table id="Pending" cellspacing="0" class="Generic dataTable" aria-describedby="Pending_info" style="width: 940px;">
+<thead>
+  <tr role="row"><th class="sorting_disabled" role="columnheader" rowspan="1" colspan="1" aria-label="More" style="width: 28px;">More</th><th id="Tip-Sort" class="Case-Client sorting_asc" title="For multiple sorting use &#39;shift&#39; when clicking on any additional columns." role="columnheader" tabindex="0" aria-controls="Pending" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Client: activate to sort column descending" style="width: 186px;">Client</th><th id="Tip-Sort" class="Case-Number sorting" title="For multiple sorting use &#39;shift&#39; when clicking on any additional columns." role="columnheader" tabindex="0" aria-controls="Pending" rowspan="1" colspan="1" aria-label="#: activate to sort column ascending" style="width: 59px;">#</th><th id="Tip-Sort" class="Case-Type sorting" title="For multiple sorting use &#39;shift&#39; when clicking on any additional columns." role="columnheader" tabindex="0" aria-controls="Pending" rowspan="1" colspan="1" aria-label="Type: activate to sort column ascending" style="width: 65px;">Type</th><th id="Tip-Sort" class="Case-State sorting" title="For multiple sorting use &#39;shift&#39; when clicking on any additional columns." role="columnheader" tabindex="0" aria-controls="Pending" rowspan="1" colspan="1" aria-label="State: activate to sort column ascending" style="width: 56px;">State</th><th id="Tip-Sort" class="Case-Date sorting" title="For multiple sorting use &#39;shift&#39; when clicking on any additional columns." role="columnheader" tabindex="0" aria-controls="Pending" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending" style="width: 69px;">Date</th><th id="Tip-Sort" class="Case-Product sorting" title="For multiple sorting use &#39;shift&#39; when clicking on any additional columns." role="columnheader" tabindex="0" aria-controls="Pending" rowspan="1" colspan="1" aria-label="Product: activate to sort column ascending" style="width: 227px;">Product</th><th id="Tip-Sort" class="Case-Deposit-Amount sorting" title="For multiple sorting use &#39;shift&#39; when clicking on any additional columns." role="columnheader" tabindex="0" aria-controls="Pending" rowspan="1" colspan="1" aria-label="Amount: activate to sort column ascending" style="width: 81px;">Amount</th><th id="Tip-Sort" class="Case-Suitability sorting" title="For multiple sorting use &#39;shift&#39; when clicking on any additional columns." role="columnheader" tabindex="0" aria-controls="Pending" rowspan="1" colspan="1" aria-label="Suitability: activate to sort column ascending" style="width: 90px;">Suitability</th></tr>
+</thead>
+<!-- End Table Format -->
+
+  
+<tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="odd"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	BELL,  JAMES WILLIAM	</td>	<td id="Column-2" class="Case-Number ">	  28172797	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-State ">	Missouri	</td>	<td id="Column-5" class="Case-Date ">	2013-07-05	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	45,000.00	</td>	<td id="Column-8" class="Case-Suitability ">	PENDING INFO	</td>																																										</tr><tr class="even"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	BORDONARO,  AUGUST	</td>	<td id="Column-2" class="Case-Number ">	  28172320	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Ohio	</td>	<td id="Column-5" class="Case-State ">	2013-06-13	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	235,000.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="odd"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	BOYLES,  ALTA M	</td>	<td id="Column-2" class="Case-Number ">	  28171040	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Ohio	</td>	<td id="Column-5" class="Case-State ">	2013-04-17	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	141,500.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="even"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	BROWN,  DEANNA W	</td>	<td id="Column-2" class="Case-Number ">	  28171744	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Tennessee	</td>	<td id="Column-5" class="Case-State ">	2013-05-20	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	148,000.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="odd"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	BROWN,  MARTIN R	</td>	<td id="Column-2" class="Case-Number ">	  28172323	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	California	</td>	<td id="Column-5" class="Case-State ">	2013-06-13	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	40,000.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="even"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	CAUFMAN,  LINDA DIANNE	</td>	<td id="Column-2" class="Case-Number ">	  28172426	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Texas	</td>	<td id="Column-5" class="Case-State ">	2013-06-18	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	100,000.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="odd"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	CORDOVA,  AGAPITO ORLANDO	</td>	<td id="Column-2" class="Case-Number ">	  28171477	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Arizona	</td>	<td id="Column-5" class="Case-State ">	2013-05-06	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	203,811.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="even"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	DUDA,  AGNES H	</td>	<td id="Column-2" class="Case-Number ">	  28172058	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Michigan	</td>	<td id="Column-5" class="Case-State ">	2013-06-03	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	33,000.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="odd"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	FAIREY,  JOAN D	</td>	<td id="Column-2" class="Case-Number ">	  28172261	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Michigan	</td>	<td id="Column-5" class="Case-State ">	2013-06-12	</td>	<td id="Column-6" class="Case-Product ">	PHOENIX PERSONAL INCOME ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	165,000.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="even"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	GUPTILL,  FRED E	</td>	<td id="Column-2" class="Case-Number ">	  28171915	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Arizona	</td>	<td id="Column-5" class="Case-State ">	2013-05-28	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	576,000.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="odd"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	HANSEN,  ALICE M	</td>	<td id="Column-2" class="Case-Number ">	  28171751	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Arizona	</td>	<td id="Column-5" class="Case-State ">	2013-05-20	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	35,559.09	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="even"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	HARRIS,  CLARENCE J	</td>	<td id="Column-2" class="Case-Number ">	  28172404	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Ohio	</td>	<td id="Column-5" class="Case-State ">	2013-06-18	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	322,500.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="odd"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	HOGGAN,  WILLIAM E	</td>	<td id="Column-2" class="Case-Number ">	  28171979	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Utah	</td>	<td id="Column-5" class="Case-State ">	2013-05-29	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	188,000.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="even"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	KNICKER,  JERENE	</td>	<td id="Column-2" class="Case-Number ">	  28172489	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Arizona	</td>	<td id="Column-5" class="Case-State ">	2013-06-21	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	36,728.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="odd"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	LEVAN,  MARY LOU	</td>	<td id="Column-2" class="Case-Number ">	  28172761	</td>	<td id="Column-3" class="Case-Type ">	CwA	</td>	<td id="Column-4" class="Case-Date ">	Kentucky	</td>	<td id="Column-5" class="Case-State ">	2013-07-03	</td>	<td id="Column-6" class="Case-Product ">	PHOENIX NEXT GENERATION ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	32,000.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	PENDING INFO	</td>																																										</tr><tr class="even"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	LIPSEY,  RONALD K	</td>	<td id="Column-2" class="Case-Number ">	  28171889	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Utah	</td>	<td id="Column-5" class="Case-State ">	2013-05-24	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	139,300.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="odd"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	MAXEY,  EUGENIA	</td>	<td id="Column-2" class="Case-Number ">	  28172262	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Arkansas	</td>	<td id="Column-5" class="Case-State ">	2013-06-12	</td>	<td id="Column-6" class="Case-Product ">	NEXT GENERATION BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	60,000.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="even"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	MEYER,  HELEN M	</td>	<td id="Column-2" class="Case-Number ">	  28171235	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Ohio	</td>	<td id="Column-5" class="Case-State ">	2013-04-25	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	12,000.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr><tr class="odd"><td class="center "><img src="./Phoenix Web-Reporting   High Level Reporting - Issued Annuity Business_files/details_open.png"></td>	<td id="Column-1" class="Case-Client  sorting_1">	MONNIN,  KATHERINE A	</td>	<td id="Column-2" class="Case-Number ">	  28172731	</td>	<td id="Column-3" class="Case-Type ">	EXCHANGE	</td>	<td id="Column-4" class="Case-Date ">	Ohio	</td>	<td id="Column-5" class="Case-State ">	2013-07-02	</td>	<td id="Column-6" class="Case-Product ">	SECURE LIFESTYLE BONUS ANNUITY	</td>	<td id="Column-7" class="Case-Deposit-Amount ">	23,000.00	</td>	<td id="Column-8" class="Case-Sales1-Level ">	APPROVED	</td>																																										</tr></tbody></table><div class="dataTables_info" id="Pending_info">Showing 1 to 19 of 19 entries</div></div>
+<!-- End Report Display -->
+
+
+   </div>
+  <!-- End Content -->
+   </div>
+  <!-- End Content Column -->
+ </div>
+  <!-- end Master Content Container -->
+ 
+  <!-- Start Footer Container -->
+  <div class="clear">&nbsp;</div>
+    <!-- Start Footer Container -->
+  <div class="grid_12" id="FooterContainer">
+  <div class="grid_3 alpha">
+  <div id="FooterLeftColumn">
+  </div>
+  </div>
+ 
+  <div class="grid_9 omega">
+  <div id="FooterRightColumn">
+  </div>
+  </div>
+ 
+  </div>
+  <div class="clear">&nbsp;</div>
+  <!-- End Footer Container -->
+ 
+</div>  
+<!-- end master container from TopofPage Fragment-->
+<br><br>
+ 
+  <!-- Start Footer Container -->
+
+</body></html>
