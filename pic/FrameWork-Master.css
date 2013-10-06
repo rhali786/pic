@@ -1,0 +1,328 @@
+/*This stylesheet control all basic framework elements */
+/*If any element need to be customized overide using the Part.css */
+
+/*This sets the page framework as a fixed sized not liquid*/
+#PageContainer
+{
+	margin-top: 3px;/*use to set top space */ 
+	font: 11px Verdana, Arial, Helvetica, sans-serif; /*Default text inside wrapper */
+	color: #676767; /* 676767 Default text color inside wrapper */
+	text-align: left; /*Default text alignment inside wrapper */
+	background-color: #fff;
+	border-top : 1px solid #585858;
+	line-height: 160%;
+	overflow: hidden;
+
+}
+
+sup, sub { vertical-align: 0; position: relative;} 
+sup { bottom: 1ex; }
+sub { top: .8ex; }
+
+/* Unversial Messaging Controls */
+#NAICBlurb {border: 1px solid #E61577; padding: 10px 10px 10px 10px; margin: 0px 15px 20px 15px; font-size: 85%; font-weight: bold;}
+#Error-Message-Container {font-size:14px; padding: 15px 25px 25px 25px;}
+#Product-Disclaimer-Message-Red-Box {border: solid 1px #E61577; padding: 5px; margin: 10px 35px 10px 15px;}
+.Text-Red {color: #E61577;}
+.Informational-General {font-size: .9em; font-weight: normal; line-height: .9em; }
+
+/* Unversial Content Controls */
+
+/* OS Detection Controls */
+#WindowsClientOn { }
+#WindowsClientOff { display:none; }
+#NonWindowsClientOn { }
+#NonWindowsClientOff { display:none; }
+
+/*These should be used inside a contatner as a pseudo */
+/* EXAMPLE .ZZZ_hnews p { text-indent: -1em;} */
+
+/*These is for the outdent top line with left margin */
+.ZZZ_outdent { text-indent: -3em; margin-left: 3em; }
+/*These is for the indent top line with left margin */
+.ZZZ_indent { text-indent: -3em; margin-left: 6em; }
+/* End of indent and outdent settings */
+
+p {margin: 3px 0px 6px 0px;}
+hr { border: #000000 0px solid; border-top: #CCCCCC 1px solid; color: #000000; height: 1px; }
+sup {font-size:xx-small; vertical-align:top;}
+sub {font-size:xx-small; vertical-align:bottom;} 
+small{font-size:xx-small;} 
+
+hr.bluehr  { border: #336699 0px solid; border-top: #336699 1px solid; color: #336699; height: 1px; }
+hr.greyhr  { border: #676767 0px solid; border-top: #676767 1px solid; color: #676767; height: 1px; }
+
+#BPD { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #ffffff; font-size: 10px; text-align: center; }
+.bpd, .BPD { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #ffffff; font-size: 10px; text-align: center; }
+
+.ProductSubHeading2 { font-size: 12px; font-weight: bold;}
+
+.footnote { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 10px;}
+
+/* MASTHAED CONTROLS */
+#MastHead
+{ text-align: left; background-color: #ffffff; border-bottom: 5px solid #B31F36; /*Red line  line*/ margin-bottom: 0px; /*Space below red line */}
+
+#MastHeadLeft, #MastHeadCenter, #MastHeadRight
+{ text-align: left; Zbackground: #ffffff;}
+
+#MastHeadRight { padding-top: 25px;}
+#ButtonLogin { font-size:18px; text-align: right; line-height:25px; padding:55px 10px 0px 0px;}
+A#ButtonLogin:Link { color: #676767; font-weight:bold;}
+A#ButtonLogin:visited {color: #676767; font-weight:bold; text-decoration: none;}
+A#ButtonLogin:hover {color: #CC9933; font-weight:bold; text-decoration: none;}
+A#ButtonLogin :focus {color: #CC9933; font-weight:bold; text-decoration: none;}
+A#ButtonLogin:active {color: #CC9933; font-weight:bold; text-decoration: none;}
+
+#NaviBar
+{ text-align: left; Zbackground: #ffffff; margin-bottom:0px; padding-top:20px;}
+
+#NaviBarSection
+{ text-align: left; Zbackground: #ffffff; margin-bottom:1px; padding-top:0px; z-index:210;}
+
+#NaviMenu1, #NaviMenu2, #NaviMenu3, #NaviMenu4, #NaviMenu5, #NaviMenu6 
+{ text-align: left; Zbackground: #ffffff; padding:5px;}
+
+#SidebarContainer{ z-index:200;}
+
+#SidebarContainer, #SidebarNaviSite, #SidebarNaviQuick, #SidebarNavi, #Sidebar, #ContentDisplay 
+{ text-align: left; background: #ffffff;}
+
+#SidebarNaviSite{ border: solid 0px #000000; margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0xp; z-index:350;}
+#SidebarNavi{ border: solid 0px #000000; margin: 0px 0px 20px 5px; padding: 0px 0px 0px 0xp;}
+#SidebarNaviQuick .QuickLinksBanner { background: #00a7d4; font-size:13px; font-weight:bold; color: #fff; padding: 3px; margin-bottom:10px;}
+.QuickLinksBanner { background: #00a7d4; font-size:13px; font-weight:bold; color: #fff; padding: 3px; margin-top: 10px; margin-bottom:5px;}
+
+.QuickLink{padding: 0px 0px 0px 0px; margin: 0px 0px 0xp 0px;}
+.QuickLinkOff {padding: 0px 0px 0px 0px; margin: 0px 0px 0xp 0px;}
+A.QuickLink:Link {color: #676767; font-weight:bold;}
+A.QuickLink:visited {color: #676767; font-weight:bold; text-decoration: none;}
+A.QuickLink:hover {color: #CC9933; font-weight:bold; text-decoration: none;}
+A.QuickLink :focus {color: #CC9933; font-weight:bold; text-decoration: none;}
+A.QuickLink :active {color: #CC9933; font-weight:bold; text-decoration: none;}
+
+A.QuickLinkOff :Link {color: color:#B31F37; font-weight:bold; text-decoration: none;}
+A.QuickLinkOff :Hover {color: color:#740A1B; font-weight:bold; text-decoration: none;}
+
+A.QuickLinkOff :focus {color: color:#740A1B; font-weight:bold; text-decoration: none;}
+A.QuickLinkOff :active{color: color:#740A1B; font-weight:bold; text-decoration: none;}
+
+#Sidebar { background: #F0F0F0; margin-top:15px;}
+.SidebarContent, .SidebarNews { padding: 10px 5px 10px 5px;}
+.SidebarNews p { margin-left:12px; text-indent: -1em;} 
+.SidebarPic { padding: 0px 0px 0px 0px;}
+
+#SidebarSwitch{ margin-left: auto; margin-right: auto;}
+#SidebarSwitch img { display:none;}
+#SidebarSwitch img.active { display:block;}
+
+
+#MasterContentContainer  { min-height: 450px; text-align: left; background: #ffffff; margin-top: 0px; border-top: solid px #000; z-index:150;}
+#MasterCatalogContentContainer  { min-height: 550px; text-align: left; background: #ffffff; margin-top: 0px; border-top: solid px #000; z-index:150;}
+#MasterRegContentContainer  { min-height: 250px; text-align: left; background: #ffffff; margin-top: 0px; border-top: solid px #000; z-index:150;}
+
+#ContentContainer{ text-align: left; background: #ffffff; border-left: solid px #000; z-index:140;}
+#ContentBanner { border-top: solid 0px #000; border-bottom: solid 0px #000; padding-right: 0px;}
+#ContentDisplay{ text-align: left; background: #ffffff; border-left: solid px #000;}
+#ContentDisplay  .ContentBody { text-align: left; background: #ffffff;}
+.ContentBody { border-top: solid 0px #000; border-bottom: solid 0px #000; padding-right: 0px;}
+.ContentBody  ul { list-style-image: url(elements/bullet.gif); padding: 0px; margin: 3px 6px 9px 18px; }
+.ContentBody ol { padding: 0px; margin: 3px 6px 9px 25px; }
+.ContentBody  li { margin: 0px 0px 3px 0px; line-height: 150%; }
+
+#BreadcrumbContainer { border-top: solid 0px #000; border-bottom: solid 0px #000; padding-left: 5px;}
+#Breadcrumb { font-size: 14px; font-weight: bold; text-transform: uppercase;}
+
+#ColumnLeftContainer, #ColumnCenterContainer, #ColumnRightContainer
+{ text-align: left; Zbackground: #ffffff; border-top: solid px #000; }
+
+#CenterColumnImage{ margin-bottom:10px;}
+#SectionImage{ margin-bottom:10px;}
+
+#NAICBOX {border: 1px solid #E61577; padding: 0px 5px 0px 5px; margin: 10px 25px 10px 25px; font-size: 85%; font-weight: bold}
+
+.ColumnLeftContent, .ColumnCenterContent, .ColumnRightContent
+{ border-left: solid 1px #676767; border-top: solid 0px #676767; padding:0px 0px 0px 17px; min-height: 300px;}
+
+.LandingLinkSubBanner {padding: 5px 0px 5px 5px; margin-bottom: 15px; color:#fff; font-size: 12px; font-weight: bold;}
+.LandingLinkSubHead {margin-bottom: 0px; color:#B31F36; border-bottom: solid 1px #676767; margin-bottom: 10px; font-weight: bold;}
+.LandingLink {margin-left: 10px; font-weight: bold;}
+
+.Padding-Left_10  {padding-left: 10px;}
+.Padding-Left_15  {padding-left: 15px;}
+.Padding-Left_20  {padding-left: 20px;}
+.Padding-Left_25  {padding-left: 25px;}
+.Padding-Left_30  {padding-left: 30px;}
+.Padding-Left_35  {padding-left: 35px;}
+.Padding-Left_40  {padding-left: 40px;}
+.Padding-Left_45  {padding-left: 45px;}
+
+.TopLeading_1  {margin-top: 1px;}
+.TopLeading_2  {margin-top: 2px;}
+.TopLeading_3  {margin-top: 3px;}
+.TopLeading_4  {margin-top: 4px;}
+.TopLeading_5  {margin-top: 5px;}
+.TopLeading_10 {margin-top: 10px;}
+.TopLeading_15 {margin-top: 15px;}
+.TopLeading_20 {margin-top: 20px;}
+.TopLeading_25 {margin-top: 25px;}
+.TopLeading_30 {margin-top: 30px;}
+.TopLeading_35 {margin-top: 35px;}
+.TopLeading_40 {margin-top: 40px;}
+
+.BottomLeading_1 {margin-bottom: 1px;}
+.BottomLeading_2 {margin-bottom: 2px;}
+.BottomLeading_3 {margin-bottom: 3px;}
+.BottomLeading_4 {margin-bottom: 4px;}
+.BottomLeading_5 {margin-bottom: 5px;}
+.BottomLeading_10 {margin-bottom: 10px;}
+.BottomLeading_15 {margin-bottom: 15px;}
+.BottomLeading_20 {margin-bottom: 20px;}
+.BottomLeading_25 {margin-bottom: 25px;}
+.BottomLeading_30 {margin-bottom: 30px;}
+.BottomLeading_35 {margin-bottom: 35px;}
+.BottomLeading_40 {margin-bottom: 40px;}
+
+.Spacer-5 {height: 5px; clear: both;}
+.Spacer-10 {height: 10px; clear: both;}
+.Spacer-15 {height: 15px; clear: both;}
+.Spacer-20 {height: 20px; clear: both;}
+.Spacer-25 {height: 25px; clear: both;}
+.Spacer-30 {height: 30px; clear: both;}
+.Spacer-35 {height: 35px; clear: both;}
+.Spacer-40 {height: 40px; clear: both;}
+.Spacer-45 {height: 45px; clear: both;}
+.Spacer-50 {height: 50px; clear: both;}
+
+.BottomBorder_1 {border-bottom: solid 1px #676767;}
+.BottomBorder_2 {border-bottom: solid 2px #676767;}
+.BottomBorder_3 {border-bottom: solid 3px #676767;}
+.BottomBorder_4 {border-bottom: solid 4px #676767;}
+.BottomBorder_5 {border-bottom: solid 5px #676767;}
+.BottomBorder_6 {border-bottom: solid 6px #676767;}
+.BottomBorder_7 {border-bottom: solid 7px #676767;}
+.BottomBorder_8 {border-bottom: solid 8px #676767;}
+.BottomBorder_9 {border-bottom: solid 9px #676767;}
+.BottomBorder_10 {border-bottom: solid 10px #676767;}
+
+.NoBorderLeft{border-left: solid 0px #676767; padding:0px 0px 0px 0px;}
+.BorderLeft{border-left: solid 1px #676767;}
+
+.BannerSection {line-height: 100%; font-size:19px; font-weight:bold; letter-spacing: 0px; text-align: left; color:#ffffff; padding: 5px 5px 5px 5px; margin-top:0px; margin-bottom: 0px;}
+
+.BannerLanding {line-height: 100%; font-size:19px; font-weight:bold; letter-spacing: 0px; text-align: left; color:#B31F36; padding: 20px 5px 5px 0px;  margin-top:20px; margin-bottom: 10px;}
+
+.BannerCallOutLanding
+{line-height: 100%; font-size:19px; font-weight:bold; letter-spacing: 0px; text-align: left; color:#B31F36; padding: 15px 0px 0px 5px;  margin-top:0px; margin-bottom: 0px;}
+.BannerCallOut
+{line-height: 100%; font-size:19px; font-weight:bold; letter-spacing: 0px; text-align: left; color:#ffffff; padding: 15px 0px 0px 5px;  margin-top:0px; margin-bottom: 0px;}
+.BannerCallOutOperations
+{line-height: 100%; font-size:19px; font-weight:bold; letter-spacing: 0px; text-align: left; color:#8D9150; padding: 15px 0px 0px 5px;  margin-top:0px; margin-bottom: 0px;}
+.BannerCallOutPhoenix
+{line-height: 100%; font-size:19px; font-weight:bold; letter-spacing: 0px; text-align: left; color:#565656; padding: 15px 0px 0px 5px;  margin-top:0px; margin-bottom: 0px;}
+.BannerCallOutSales
+{line-height: 100%; font-size:19px; font-weight:bold; letter-spacing: 0px; text-align: left; color:#518274; padding: 15px 0px 0px 5px;  margin-top:0px; margin-bottom: 0px;}
+.BannerCallOutTraining
+{line-height: 100%; font-size:19px; font-weight:bold; letter-spacing: 0px; text-align: left; color:#3E647E; padding: 15px 0px 0px 5px;  margin-top:0px; margin-bottom: 0px;}
+
+.BannerOperationsA1, .BannerOperationsA2, .BannerOperationsA3, .BannerOperationsA4, .BannerPhoenixA1, .BannerPhoenixA2 , .BannerPhoenixA3, .BannerPhoenixA4, .BannerSalesA1, .BannerSalesA2, .BannerSalesA3, .BannerSalesA4, .BannerTrainingA1, .BannerTrainingA2 , .BannerTrainingA3, .BannerTrainingA4  {PADDING-TOP: 4px; PADDING-RIGHT: 0px; PADDING-BOTTOM: 4px; PADDING-LEFT: 5px; MARGIN: 18px 0px 10px 0px; COLOR: #FFFFFF; font-weight: bold;}
+
+.BannerOperations { background: #8D9150;}
+.BannerOperationsA1 { background: #C5C897;}
+.BannerOperationsA2 { background: #C9BF85;}
+.BannerOperationsA3 { background: #5A5E1A;}
+.BannerOperationsA4 { background: #6A6D48;}
+
+.BannerPhoenix { background: #565656;}
+.BannerPhoenixA1 { background: #ABABAB;}
+.BannerPhoenixA2 { background: #A2A2A2;}
+.BannerPhoenixA3 { background: #454545;}
+
+.BannerSales {background: #518274;}
+.BannerSalesA1 { background: #8AC1B1;}
+.BannerSalesA2 { background: #99C1B5;}
+.BannerSalesA3 { background: #1A5544;}
+.BannerSalesA4 { background: #46625A;}
+
+.BannerTraining { background: #3E647E;}
+.BannerTrainingA1 { background: #76A0BF;}
+.BannerTrainingA2 { background: #89A8BF;}
+.BannerTrainingA3 { background: #143852;}
+.BannerTrainingA4 { background: #3B505F;}
+
+.BannerSiteMessages { background: #FF0000;}
+.BannerSiteMessagesA1 { background: #FF4040;}
+.BannerSiteMessagesA2 { background: #FF7373;}
+.BannerSiteMessagesA3 { background: #BF3030;}
+.BannerSiteMessagesA4 { background: #A60000;}
+
+.BannerCenter
+{line-height: 100%; text-transform: uppercase; font-size:14px; font-weight: bold; text-align:left; color:#ffffff; margin-top:0px; margin-bottom: 5px; padding:3px;}
+.BannerSidebar
+{line-height: 100%; font-size:14px; font-weight: bold; text-align:left; color:#ffffff; margin: 10px 0px 0px 0px; padding:5px ;}
+.BannerRed { background: #B31F36;}
+.BannerGray { background: #F0F0F0; color: #676767;}
+.BannerGrayLine { border-bottom: solid 4px #F0F0F0;}
+
+/*Icons Controls */
+.PDF-33-12{vertical-align: middle; padding-left: 10px;}
+
+#AnnuityProductTitle  { margin: 0px 0px 15px 0px; font-size: 145% ; font-weight: bold;}
+#LifeProductTitle { margin: 0px 0px 15px 0px; font-size: 145% ; font-weight: bold;}
+#ElderCareProductTitle { margin: 0px 0px 15px 0px; font-size: 145% ; font-weight: bold;}
+
+.reg { position: relative; top: -3px; font-size: 10px; vertical-align: super;}
+
+.h1 { margin: 0px 0px 10px 0px; font-size: 125% ; font-weight: bold;}
+.h2 { margin: 9px 0px 0px 0px; font-weight: bold; }
+
+.reverseh2
+{PADDING-TOP: 4px; PADDING-RIGHT: 0px; PADDING-BOTTOM: 4px; PADDING-LEFT: 5px; MARGIN: 18px 0px 10px 0px; COLOR: #FFFFFF; font-weight: bold; background-color: #AABBBB;}
+
+.subhead, .subheading { margin: 6px 0px 0px 0px; font-weight: bold; }
+
+.LoginMessagerContainer{ background:#fff; padding:10px; margin-bottom:10px;
+-webkit-border-radius:5px;
+-moz-border-radius:5px;
+border:3px solid #d8d8d8; }
+.LoginMessagerContainer h2{ font-size:16px; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #dadada;}
+.buttoncalculatorcontainer { padding: 10px 0px 20px 10px; border: solid 0px #000; text-indent: 5px; margin-left: 30px;}
+.buttoncalculator{ padding-top: 10px;}
+.buttoncalculatoron{ padding-top: 10px; cursor: hand; }
+.buttoncalculatoroff { padding-top: 10px; }
+.buttoncalculatortext { font-size: 12px; font-weight: bold; padding-bottom: 10px;}
+.blockquote {padding:0px 0px 0px 30px; }
+
+
+
+/* Link CONTROLS */
+A:link {color: #336699; text-decoration: none;}
+A:visited {color: #336699; text-decoration: none;}
+A:hover{color: #CC9933; text-decoration: none;}
+
+.CenterLink{margin: 0px 0px 5px 0px;}
+A.CenterLink:Link {font-weight:bold;}
+A.CenterLink:visited {font-weight:bold; text-decoration: none;}
+A.CenterLink:hover{font-weight:bold; text-decoration: none;}
+
+
+/* FOOTER CONTROLS */
+#FooterContainer  { border-top: 5px solid #B31B34; background: #ffffff; margin-top: 15px;}
+#FooterLeftColumn, #FooterRightColumn { text-align: left; padding: 10px 10px 0px 10px;}
+#FooterLeftColumn  ul { list-style-image: url(elements/bullet.gif); padding: 0px; margin: 3px 6px 9px 18px; }
+#FooterLeftColumn ol { padding: 0px; margin: 3px 6px 9px 25px; }
+#FooterLeftColumn li { margin: 0px 0px 3px 0px; line-height: 150%; }
+
+.Footerlinks { margin-left: 0px; padding-left: 10px;}
+A.Footer:link { color: #336699; text-decoration: none;}
+A.Footer:visited { color: #336699; text-decoration: none;}
+A.Footer:hover { color: #CC9933; text-decoration: none;}
+
+.ZZZfooterdisplay
+{
+	margin: 15px 20px 20px 25px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 16px;
+	color: #626469;
+}

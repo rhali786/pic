@@ -1,0 +1,109 @@
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+ 
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/cssplay23.html
+Copyright (c) Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+/* for Internet Explorer to replace :target */
+a#pull,
+a#push {behavior:url(css/target.htc)}
+ 
+#pulldown {width:100%; height:400px; left:0; position:fixed; z-index:800;
+transition: 0.8s ease-in-out;
+-o-transition: 0.8s ease-in-out;
+-moz-transition: 0.8s ease-in-out;
+-webkit-transition: all 0.8s ease-in-out;
+}
+.close {top:-400px;}
+ 
+#opaque {position:absolute; width:100%; left:0; height:400px; background:#333; border-bottom:1px solid #222; opacity:0.9; filter: alpha(opacity=90);
+-o-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#contents {height:400px; width:100%; left:0; position:absolute; color:#fff; background:url(images/top-back.gif) repeat-x; text-align:center; overflow:hidden;}
+#lowerContent {width:952px; margin:40px auto 0 auto;}
+#lowerContent dl {width:226px; margin:0 5px; padding:5px 0; background:#555; float:left; display:inline; text-align:left; border:1px solid #888;}
+#lowerContent dl dt {color:#ff8000; font:bold 12px/25px arial, sans-serif; padding:0 5px;}
+#lowerContent dl dd {color:#aaa; font:12px/18px arial, sans-serif; margin:0; padding:0 5px;}
+#lowerContent dl dd a {color:#ddd;}
+#lowerContent dl dd a:hover {color:#fff;}
+ 
+ 
+a#pull {display:block; position:absolute; z-index:100; bottom:-30px; color:#fff; left:50%; background:url(images/close.png); z-index:-1; width:200px; margin-left:-100px; height:30px; text-align:center;
+text-decoration:none; font-family:arial, sans-serif; font-size:14px; line-height:30px;}
+ 
+a#push {display:none; position:absolute; z-index:100; bottom:-30px; color:#fff; left:50%;background:url(images/open.png); z-index:-1; width:200px; margin-left:-100px;  height:30px; text-align:center;
+text-decoration:none; font-family:arial, sans-serif; font-size:14px; line-height:30px;}
+ 
+#pulldown:target {top:0;}
+#pulldown:target #pull {display:none;}
+#pulldown:target #push {display:block;}
+ 
+/* for IE 8 and lower */
+.open {top:0;}
+.open #pull {display:none;}
+.open #push {display:block;}
+ 
+.close {top:-400px;}
+.close #pull {display:block;}
+.close #push {display:none;}
+ 
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+ 
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/ipad-droplist.html
+Copyright (c) Stu Nicholls. All rights reserved.
+This stylesheet and the assocaited (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+ 
+/* this is a CSS answer to fix the hover/focus '~' and hover/focus '+' problem in safari and chrome */
+html {-webkit-animation: safariSelectorFix infinite 1s;}
+@-webkit-keyframes safariSelectorFix {
+0% {zoom:1;} 
+100% {zoom:1;}
+}
+ 
+.nav {width:745px; height:36px; background:#666; position:relative; z-index:100; font-family:arial, sans-serif; margin:0 auto; border-top:5px solid #ff8000; border-bottom:1px solid #000; text-align:left;}
+.menu,
+.menu ul {padding:0; margin:0; list-style:none;}
+.menu {width:730px; border-top:1px solid #333; padding-left:15px;}
+ 
+.menu ul.sub {position:absolute; left:-9999px; top:35px; background:#444; padding:0 0 0 10px; z-index:-1; border-top:1px solid #999;}
+.menu ul.sub1 {width:150px;}
+.menu ul.sub2 {width:300px;}
+.menu ul.sub3 {width:450px;}
+.menu ul.sub h5 {padding:4px 0; margin:0; color:#ff8000; font-size:12px; width:140px; line-height:18px;}
+ 
+.menu li.top-li {float:left; position:relative; background:#666; z-index:50;}
+.menu li.top-li a.top-a {display:block; float:left; line-height:35px; color:#ccc; padding:0 18px 0 10px; text-decoration:none; font-size:14px;}
+ 
+.menu li.top-li a.top-a:hover {background:#444; color:#fff;}
+.menu li.top-li:hover > a.top-a {background:#444; color:#fff;}
+.menu li.has-sub a.top-a:hover {height:36px;}
+.menu li.has-sub:hover > a.top-a {height:36px;}
+ 
+.menu li.close a {position:absolute; left:50%; top:-30px; width:100px; height:30px; line-height:30px; color:#fff; font-weight:bold; font-size:12px; padding:0; margin:0 0 0 -50px; background:#ff8000; text-align:center; text-decoration:none; display:none;}
+ 
+.menu ul li {width:150px; float:left;}
+.menu ul li a {line-height:15px; color:#fff; background:#666; display:block; width:120px; margin-bottom:1px; padding:3px 10px; text-decoration:none; font-size:12px;}
+.menu ul li a:hover {background:#ccc; color:#000;}
+.menu ul li.bottomLine {width:100%; clear:left; padding:5px 10px 5px 0; background:#333; margin-left:-10px; margin-top:5px; border-top:1px solid #888;}
+.menu ul li.bottomLine p {padding:0; margin:0; line-height:20px; font-size:12px; color:#ff8000; font-weight:bold; width:100%; padding-left:10px;}
+.menu ul li.bottomLine a {display:inline; padding:0 3px; line-height:20px; background:none; color:#ccc;}
+.menu ul li.bottomLine a:hover {color:#fff;}
+ 
+.menu :hover ul.sub {left:0;}
+.menu :hover ul.left1 {left:-150px;}
+ 
+/* for IE6 */
+.menu table {border-collapse:collapse; margin-bottom:-1px;}
+* html .menu ul.sub {border:0;}
+* html .menu ul li.bottomLine {padding:5px 0 5px 10px;}
+* html #pulldown {position:absolute;}

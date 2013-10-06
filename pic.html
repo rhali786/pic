@@ -1,0 +1,1374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Phoenix Web-Reporting | High Level Reporting - Issued Annuity Business</title>
+  <!-- INCLUDES -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="css/datatables.css">
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" language="javascript" src="pic/jquery-1.8.2.min.js"></script>
+    -    <script type="text/javascript" charset="utf-8" language="javascript"   src="http://cdn.kendostatic.com/2012.1.322/js/kendo.all.min.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf-8" language="javascript"  
+    src="js/angular.min.js"></script>
+
+    <script type="text/javascript" charset="utf-8" language="javascript"  src="js/angular-animate.min.js"></script>
+    <script  type="text/javascript" charset="utf-8" language="javascript"  src="js/angular-route.min.js"></script>    
+    <script src="js/ui-bootstrap-tpls-0.6.0.js"></script>
+    
+    <!-- DataTables -->
+    <script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script>
+    <script src="js/datatables.js"></script>    
+
+    <!-- PHNX LINKS -->
+    <link rel="stylesheet" type="text/css" media="all" href="./pic/Web-Reporting.css">
+    
+  <style type="text/css">
+  
+    .no-wrap{
+      white-space:nowrap;
+    }
+    .stong{
+      font-weight: bold;
+    }
+    .height-200{
+      height: 200px;
+
+    }
+    body{
+      margin-left:6em;
+    }
+    div.dataTables_wrapper {
+      width: 800px;
+
+    }
+    div.dataTables_info {
+      padding-top: 0px;
+      float:left;
+    }
+    .pagination{
+      margin-top:1em;
+    }
+    .table-striped>tbody>tr:nth-child(odd)>td,.table-striped>tbody>tr:nth-child(odd)>th{background-color:#EEEEEE}
+    .table-hover>tbody>tr:hover>td,.table-hover>tbody>tr:hover>th{background-color:#d9edf7}
+
+.well{
+  margin: 2px;
+}
+  </style>
+
+  <script>
+    $(document).ready(function() {  
+        
+          
+      } );
+  </script>
+  <script type="text/javascript" charset="utf-8" language="javascript" src="./pic/scripts.js"></script>
+</head>
+
+<body >
+  <!--CONTROL-->    <br>
+    <div class="row">
+    <!-- Control Labels -->
+      <div class="col-xs-1 well height-200">
+        <div class="row"> <br><br></div>
+        
+        <div class="row">
+          <div class="col-md-12">Pending</div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 alert-info">Issued</div>      
+        </div>
+        <div class="row">
+          <div class="col-md-12 ">Closed</div>      
+        </div>
+        <div class="row">
+          <div class="col-md-12 alert-info">Totals:</div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 ">Placement Rate:</div>
+        </div>
+      </div>
+    <!-- Control Counts -->
+      <div class="col-md-3 well text-center height-200">
+        <div class="row">
+          <strong>
+            <div class="col-md-12 text-center">Year to Date</div>
+            
+          </strong>
+        </div>
+        <div class="row">
+          <strong>
+            <div class="col-md-6">Policy Count</div>
+            <div class="col-md-6">Total Premiums</div>
+          </strong>
+        </div>
+        <div class="row active">
+            <div class="col-md-6">1</div>
+            <div class="col-md-6">$3</div>
+        </div>
+        <div class="row alert-info">
+            <div class="col-md-6 ">1</div>
+            <div class="col-md-6">$3</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">1</div>
+            <div class="col-md-6">$3</div>
+        </div>
+        <div class="row alert-info">
+            <div class="col-md-6">1</div>
+            <div class="col-md-6">$3</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">1</div>
+            <div class="col-md-6">$3</div>
+        </div>
+        <div class="row"></div>
+      </div>
+    <!--Issued By Month-->   
+      <div class="  col-md-7 ">
+          <div class="chart-wrapper">
+              <div id="issuedAnnualBar" ></div>
+              <script>
+                function createChart() {
+                    $("#issuedAnnualBar").kendoChart({
+                        title: {
+                            text: "Issued By Month"
+                        },chartArea: {
+                            width: 400,
+                            height: 200
+                        },
+                        seriesDefaults: {
+                            type: "column"
+                        },
+                        series: [{
+                            name: "Issued 2013",
+                            data: [10,20,30,4,5,6,7,8,9,10,11,12]
+                        },{
+                            name: "Issued 2014",
+                            data: [10,20,30,4,5,6,7,8,9,10,11,12]
+                        }],
+                        valueAxis: {
+                            labels: {
+                                format: "{0} "
+                            },
+                            line: {
+                                visible: false
+                            },
+                            axisCrossingValue: 0
+                        },
+                        categoryAxis: {
+                            categories: ["jan","feb","march","apr","may","jun","jul","aug","sep","oct","nov","dec"],
+                            line: {
+                                visible: false
+                            },
+                            labels: {
+                                visible: false
+                            }
+                        },
+                        tooltip: {
+                            visible: true,
+                            format: "{0}%",
+                            template: "${value} in ${category}"
+                        }
+                    });
+                }
+
+                $(document).ready(createChart);
+                $(document).bind("kendo:skinChange", createChart);
+              </script>
+          </div>
+      </div>
+    </div>
+
+    <!-- Pie Chart Control -->
+      <div class="row">
+        <div class=" text-center col-md-3">
+          <div id='picPieChart' ></div>
+          <script>
+             var dataSet = [ {
+                  category: "Pending",
+                  value: 156,
+                  
+              },
+              {
+                  category: "Issued",
+                  value: 568,
+                  
+              }, {
+                  category: "Closed",
+                  value: 49,
+                  
+              } ];
+
+              $("#picPieChart").kendoChart({
+                  title: 
+                  {
+                      
+                  }, chartArea: {
+                    width: 250,
+                    height: 250
+                  },
+                  legend: 
+                  {
+                      position: "bottom"
+                  },
+                  seriesDefaults: 
+                  {
+                      labels: 
+                       {
+                          visible: true,
+                           template: "${value} ${category}",
+                           
+                       }
+                  },
+                  seriesColors: ["#00A7D4", "#C6DB00","#FF5C00","black"],
+                  series: 
+                  [{
+                      type: "pie",
+                      data: dataSet
+                  }],
+                  seriesClick: function(e) {
+                  alert(e.category);
+                },
+                   
+              });
+          </script>
+          <BR>    
+        </div>
+          <div class="col-md-3 well  height-200">
+              <div class="row">
+              <strong>
+                <div class="col-md-12 text-center">Product Mix</div>
+              </strong>
+              </div>
+              <div class="row active">
+                  <div class="col-md-9">SECURE LIFESTYLE BONUS ANNUITY</div>
+                  <div class="col-md-1">500</div>
+              </div>
+              <div class="row ">
+                  <div class="col-md-9 ">PHOENIX PERSONAL INCOME ANNUITY</div>
+                  <div class="col-md-1">400</div>
+              </div>
+              <div class="row">
+                  <div class="col-md-9">NEXT GENERATION BONUS ANNUITY</div>
+                  <div class="col-md-1">300</div>
+              </div>
+              </div> 
+          <div class="col-md-4   height-200">
+            <div id='NIGO' ></div>
+          <script>
+             var dataSet = [ {
+                  category: "NIGO",
+                  value: 156,
+                  
+              },
+              {
+                  category: "IGO",
+                  value: 568,
+                  
+              } ];
+
+              $("#NIGO").kendoChart({
+                  title: 
+                  {
+                      
+                  }, chartArea: {
+                    width: 275,
+                    height: 250
+                  },
+                  legend: 
+                  {
+                      position: "bottom"
+                  },
+                  seriesDefaults: 
+                  {
+                      labels: 
+                       {
+                          visible: true,
+                           template: "${value} ${category}",
+                           
+                       }
+                  },
+                  seriesColors: ["#00A7D4", "#C6DB00","#FF5C00","black"],
+                  series: 
+                  [{
+                      type: "pie",
+                      data: dataSet
+                  }],
+                  seriesClick: function(e) {
+                  alert(e.category);
+                },
+                   
+              });
+          </script>
+          </div>
+              
+          
+        
+      </div>
+
+    <!-- Product Mix -->
+    
+<!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title"><div id="modalTitle">TEST</div></h4>
+        </div>
+        <div class="modal-body">
+          <div id="modalBody">TEST</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+
+
+
+    <!--DATATABLES-->   
+      <div id="drillDown"> 
+        <table>
+          <thead>
+            <tr>
+              <th class="Client Name-cell">Client Name</th>
+              <th class="Case Number-cell">Case Number</th>
+              <th class="Case Type-cell">Case Type</th>
+              <th class="Issue State-cell">Issue State</th>
+              <th class="Application Received Date-cell">Application Received Date</th>
+              <th class="Product Name-cell">Product Name</th>
+              <th class="Estimated Deposit Amount-cell">Estimated Deposit Amount</th>
+              <th class="Suitability-cell">Suitability</th>
+              <th class="IGO-cell">IGO</th>
+              <th class="NIGO Reason 1-cell">NIGO Reason 1</th>
+              <th class="Resolved Date 1-cell">Resolved Date 1</th>
+              <th class="NIGO Reason 2-cell">NIGO Reason 2</th>
+              <th class="Resolved Date 2-cell">Resolved Date 2</th>
+              <th class="NIGO Reason 3-cell">NIGO Reason 3</th>
+              <th class="Resolved Date 3-cell">Resolved Date 3</th>
+              <th class="NIGO Reason 4-cell">NIGO Reason 4</th>
+              <th class="Resolved Date 4-cell">Resolved Date 4</th>
+              <th class="NIGO Reason 5-cell">NIGO Reason 5</th>
+              <th class="Resolved Date 5-cell">Resolved Date 5</th>
+              <th class="NIGO Notes-cell">NIGO Notes</th>
+              <th class="Transfer Company Name1-cell">Transfer Company Name1</th>
+              <th class="Transfer Amount-cell">Transfer Amount</th>
+              <th class="Requested Date -cell">Requested Date </th>
+              <th class="Received Date -cell">Received Date </th>
+              <th class="Transfer Company Name2-cell">Transfer Company Name2</th>
+              <th class="Transfer Amount-cell">Transfer Amount</th>
+              <th class="Requested Date -cell">Requested Date </th>
+              <th class="Received Date -cell">Received Date </th>
+              <th class="Transfer Company Name3-cell">Transfer Company Name3</th>
+              <th class="Transfer Amount-cell">Transfer Amount</th>
+              <th class="Requested Date -cell">Requested Date </th>
+              <th class="Received Date -cell">Received Date </th>
+              <th class="Transfer Company Name4-cell">Transfer Company Name4</th>
+              <th class="Transfer Amount-cell">Transfer Amount</th>
+              <th class="Requested Date -cell">Requested Date </th>
+              <th class="Received Date -cell">Received Date </th>
+              <th class="Transfer Company Name5-cell">Transfer Company Name5</th>
+              <th class="Transfer Amount-cell">Transfer Amount</th>
+              <th class="Requested Date -cell">Requested Date </th>
+              <th class="Received Date -cell">Received Date </th>
+              <th class="Sales Level 1 -cell">Sales Level 1 </th>
+              <th class="Sales Level 2-cell">Sales Level 2</th>
+              <th class="Sales Level 3-cell">Sales Level 3</th>
+              <th class="Producer 1 Name-cell">Producer 1 Name</th>
+              <th class="Producer 1 Code-cell">Producer 1 Code</th>
+              <th class="Producer 2 Name-cell">Producer 2 Name</th>
+              <th class="Producer 2 Code-cell">Producer 2 Code</th>
+              <th class="Producer 3 Name-cell">Producer 3 Name</th>
+              <th class="Producer 3 Code-cell">Producer 3 Code</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="firstRow">
+              <td class="Client Name-cell">BELL,  JAMES WILLIAM</td>
+              <td class="Case Number-cell">  28172797</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Missouri</td>
+              <td class="Application Received Date-cell">2013-07-05</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">45,000.00</td>
+              <td class="Suitability-cell">PENDING INFO</td>
+              <td class="IGO-cell">Y</td>
+              <td class="NIGO Reason 1-cell"></td>
+              <td class="Resolved Date 1-cell"></td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">GRADIENT INSURANCE BROKERAGE INC</td>
+              <td class="Sales Level 3-cell"></td>
+              <td class="Producer 1 Name-cell">THOMAS HENNENHOEFER</td>
+              <td class="Producer 1 Code-cell">410582</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">LEVAN,  MARY LOU</td>
+              <td class="Case Number-cell">  28172761</td>
+              <td class="Case Type-cell">CwA</td>
+              <td class="Issue State-cell">Kentucky</td>
+              <td class="Application Received Date-cell">2013-07-03</td>
+              <td class="Product Name-cell">PHOENIX NEXT GENERATION ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">32,000.00</td>
+              <td class="Suitability-cell">PENDING INFO</td>
+              <td class="IGO-cell">Y</td>
+              <td class="NIGO Reason 1-cell"></td>
+              <td class="Resolved Date 1-cell"></td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">GRADIENT INSURANCE BROKERAGE INC</td>
+              <td class="Sales Level 3-cell"></td>
+              <td class="Producer 1 Name-cell">CHRISTOPHER BERNARD LEMILY</td>
+              <td class="Producer 1 Code-cell">411563</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">MONNIN,  KATHERINE A</td>
+              <td class="Case Number-cell">  28172731</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Ohio</td>
+              <td class="Application Received Date-cell">2013-07-02</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">23,000.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">Y</td>
+              <td class="NIGO Reason 1-cell"></td>
+              <td class="Resolved Date 1-cell"></td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">FINANCIAL INDEPENDENCE GROUP, INC.</td>
+              <td class="Sales Level 3-cell"></td>
+              <td class="Producer 1 Name-cell">CHARLES EDWARD NEUMAIER</td>
+              <td class="Producer 1 Code-cell">410262</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">KNICKER,  JERENE</td>
+              <td class="Case Number-cell">  28172489</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Arizona</td>
+              <td class="Application Received Date-cell">2013-06-21</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">36,728.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">N</td>
+              <td class="NIGO Reason 1-cell">Bene-DOB/SSN</td>
+              <td class="Resolved Date 1-cell">Jun 24, 2013</td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell">American Equity</td>
+              <td class="Transfer Amount-cell">12.000</td>
+              <td class="Requested Date -cell">Jun 25, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell">Life Insurance Company of the Southwest</td>
+              <td class="Transfer Amount-cell">12.000</td>
+              <td class="Requested Date -cell">Jun 25, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell">Life Insurance Company of the Southwest</td>
+              <td class="Transfer Amount-cell">12.000</td>
+              <td class="Requested Date -cell">Jun 25, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">VAZIRANI ASSOCIATES & FINANCIA</td>
+              <td class="Sales Level 3-cell">REDAELLI FINANCIAL LLC</td>
+              <td class="Producer 1 Name-cell">RICHARD REDAELLI</td>
+              <td class="Producer 1 Code-cell">410080</td>
+              <td class="Producer 2 Name-cell">ANIL VAZIRANI</td>
+              <td class="Producer 2 Code-cell">410084</td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">HARRIS,  CLARENCE J</td>
+              <td class="Case Number-cell">  28172404</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Ohio</td>
+              <td class="Application Received Date-cell">2013-06-18</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">322,500.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">Y</td>
+              <td class="NIGO Reason 1-cell"></td>
+              <td class="Resolved Date 1-cell"></td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell">Aviva</td>
+              <td class="Transfer Amount-cell">100.000</td>
+              <td class="Requested Date -cell">Jun 19, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell">Aviva</td>
+              <td class="Transfer Amount-cell">100.000</td>
+              <td class="Requested Date -cell">Jun 19, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell">Pacific Life</td>
+              <td class="Transfer Amount-cell">11,647.03</td>
+              <td class="Requested Date -cell">Jun 19, 2013</td>
+              <td class="Received Date -cell">Jun 25, 2013</td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">FINANCIAL INDEPENDENCE GROUP, INC.</td>
+              <td class="Sales Level 3-cell"></td>
+              <td class="Producer 1 Name-cell">CHARLES EDWARD NEUMAIER</td>
+              <td class="Producer 1 Code-cell">410262</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">CAUFMAN,  LINDA DIANNE</td>
+              <td class="Case Number-cell">  28172426</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Texas</td>
+              <td class="Application Received Date-cell">2013-06-18</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">100,000.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">N</td>
+              <td class="NIGO Reason 1-cell">NAIC CE cert</td>
+              <td class="Resolved Date 1-cell">Jun 25, 2013</td>
+              <td class="NIGO Reason 2-cell">NAIC prod cert</td>
+              <td class="Resolved Date 2-cell">Jun 25, 2013</td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell">Allianz</td>
+              <td class="Transfer Amount-cell">100.000</td>
+              <td class="Requested Date -cell">Jun 26, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">CORNERSTONE SENIOR SVCS</td>
+              <td class="Sales Level 3-cell"></td>
+              <td class="Producer 1 Name-cell">JEROD S HUNT</td>
+              <td class="Producer 1 Code-cell">411567</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">BORDONARO,  AUGUST</td>
+              <td class="Case Number-cell">  28172320</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Ohio</td>
+              <td class="Application Received Date-cell">2013-06-13</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">235,000.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">N</td>
+              <td class="NIGO Reason 1-cell">Bene-DOB/SSN</td>
+              <td class="Resolved Date 1-cell">Jun 27, 2013</td>
+              <td class="NIGO Reason 2-cell">NAIC prod cert</td>
+              <td class="Resolved Date 2-cell">Jun 19, 2013</td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell">Old Mutual (OM) Financial Life Insurance Co</td>
+              <td class="Transfer Amount-cell">235.000</td>
+              <td class="Requested Date -cell">Jun 24, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">MATTHEW PASHBY</td>
+              <td class="Sales Level 3-cell">CRAIG A CHANDLER</td>
+              <td class="Producer 1 Name-cell">DAVID MORIN</td>
+              <td class="Producer 1 Code-cell">411542</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">BROWN,  MARTIN R</td>
+              <td class="Case Number-cell">  28172323</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">California</td>
+              <td class="Application Received Date-cell">2013-06-13</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">40,000.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">N</td>
+              <td class="NIGO Reason 1-cell">NAIC prod cert</td>
+              <td class="Resolved Date 1-cell">May 10, 2013</td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell">Midland National</td>
+              <td class="Transfer Amount-cell">20.000</td>
+              <td class="Requested Date -cell">Jun 19, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell">Client</td>
+              <td class="Transfer Amount-cell">20.000</td>
+              <td class="Requested Date -cell">Jun 19, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">FINANCIAL INDEPENDENCE GROUP, INC.</td>
+              <td class="Sales Level 3-cell">KORTRIGHT PARTNERS LLC</td>
+              <td class="Producer 1 Name-cell">RODNEY BRIAN MOSS</td>
+              <td class="Producer 1 Code-cell">411555</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">FAIREY,  JOAN D</td>
+              <td class="Case Number-cell">  28172261</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Michigan</td>
+              <td class="Application Received Date-cell">2013-06-12</td>
+              <td class="Product Name-cell">PHOENIX PERSONAL INCOME ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">165,000.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">N</td>
+              <td class="NIGO Reason 1-cell">Beneficiary</td>
+              <td class="Resolved Date 1-cell">Jun 13, 2013</td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell">North American Company</td>
+              <td class="Transfer Amount-cell">56.000</td>
+              <td class="Requested Date -cell">Jun 13, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell">Lincoln Financial</td>
+              <td class="Transfer Amount-cell">114,730.13</td>
+              <td class="Requested Date -cell">Jun 13, 2013</td>
+              <td class="Received Date -cell">Jun 26, 2013</td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">GRADIENT INSURANCE BROKERAGE INC</td>
+              <td class="Sales Level 3-cell">PROTECTIVE PLANNING GRP LLC</td>
+              <td class="Producer 1 Name-cell">JEFFREY KODET</td>
+              <td class="Producer 1 Code-cell">411402</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">MAXEY,  EUGENIA</td>
+              <td class="Case Number-cell">  28172262</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Arkansas</td>
+              <td class="Application Received Date-cell">2013-06-12</td>
+              <td class="Product Name-cell">NEXT GENERATION BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">60,000.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">N</td>
+              <td class="NIGO Reason 1-cell"></td>
+              <td class="Resolved Date 1-cell"></td>
+              <td class="NIGO Reason 2-cell">NAIC prod cert</td>
+              <td class="Resolved Date 2-cell">May 16, 2013</td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell">MISSING OWNER SIGNATURE ON 0L4774</td>
+              <td class="Transfer Company Name1-cell">Protective</td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell">Jun 27, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">FINANCIAL INDEPENDENCE GROUP, INC.</td>
+              <td class="Sales Level 3-cell">KORTRIGHT PARTNERS LLC</td>
+              <td class="Producer 1 Name-cell">THOMAS RAY CORNWELL</td>
+              <td class="Producer 1 Code-cell">411569</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">DUDA,  AGNES H</td>
+              <td class="Case Number-cell">  28172058</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Michigan</td>
+              <td class="Application Received Date-cell">2013-06-03</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">33,000.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">Y</td>
+              <td class="NIGO Reason 1-cell"></td>
+              <td class="Resolved Date 1-cell"></td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell">American Equity</td>
+              <td class="Transfer Amount-cell">33.000</td>
+              <td class="Requested Date -cell">Jul 2, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">GRADIENT INSURANCE BROKERAGE INC</td>
+              <td class="Sales Level 3-cell">PROTECTIVE PLANNING GRP LLC</td>
+              <td class="Producer 1 Name-cell">JOHN R MCGONAGLE JR</td>
+              <td class="Producer 1 Code-cell">411480</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">HOGGAN,  WILLIAM E</td>
+              <td class="Case Number-cell">  28171979</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Utah</td>
+              <td class="Application Received Date-cell">2013-05-29</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">188,000.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">Y</td>
+              <td class="NIGO Reason 1-cell"></td>
+              <td class="Resolved Date 1-cell"></td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell">American Equity</td>
+              <td class="Transfer Amount-cell">188.000</td>
+              <td class="Requested Date -cell">Jun 3, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">GRADIENT INSURANCE BROKERAGE INC</td>
+              <td class="Sales Level 3-cell"></td>
+              <td class="Producer 1 Name-cell">KELLY SCOTT</td>
+              <td class="Producer 1 Code-cell">410135</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">GUPTILL,  FRED E</td>
+              <td class="Case Number-cell">  28171915</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Arizona</td>
+              <td class="Application Received Date-cell">2013-05-28</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">576,000.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">N</td>
+              <td class="NIGO Reason 1-cell">Other</td>
+              <td class="Resolved Date 1-cell">May 29, 2013</td>
+              <td class="NIGO Reason 2-cell">Other</td>
+              <td class="Resolved Date 2-cell">Jun 3, 2013</td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell">1 - TITLE REVIEW</td>
+              <td class="Transfer Company Name1-cell">Aviva</td>
+              <td class="Transfer Amount-cell">576.000</td>
+              <td class="Requested Date -cell">Jun 4, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">ADVISORS EXCEL LLC</td>
+              <td class="Sales Level 3-cell">ARIZONA ESTATE PLANNERS INC</td>
+              <td class="Producer 1 Name-cell">MARTIN C GUZMAN</td>
+              <td class="Producer 1 Code-cell">411023</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">LIPSEY,  RONALD K</td>
+              <td class="Case Number-cell">  28171889</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Utah</td>
+              <td class="Application Received Date-cell">2013-05-24</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">139,300.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">Y</td>
+              <td class="NIGO Reason 1-cell"></td>
+              <td class="Resolved Date 1-cell"></td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell">ING</td>
+              <td class="Transfer Amount-cell">139.300</td>
+              <td class="Requested Date -cell">May 30, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">GRADIENT INSURANCE BROKERAGE INC</td>
+              <td class="Sales Level 3-cell"></td>
+              <td class="Producer 1 Name-cell">KELLY SCOTT</td>
+              <td class="Producer 1 Code-cell">410135</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">BROWN,  DEANNA W</td>
+              <td class="Case Number-cell">  28171744</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Tennessee</td>
+              <td class="Application Received Date-cell">2013-05-20</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">148,000.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">N</td>
+              <td class="NIGO Reason 1-cell">NAIC prod cert</td>
+              <td class="Resolved Date 1-cell">May 23, 2013</td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell">North American Company</td>
+              <td class="Transfer Amount-cell">148.000</td>
+              <td class="Requested Date -cell">May 30, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">FINANCIAL INDEPENDENCE GROUP, INC.</td>
+              <td class="Sales Level 3-cell">KORTRIGHT PARTNERS LLC</td>
+              <td class="Producer 1 Name-cell">RONNIE G ADAMS</td>
+              <td class="Producer 1 Code-cell">411551</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">HANSEN,  ALICE M</td>
+              <td class="Case Number-cell">  28171751</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Arizona</td>
+              <td class="Application Received Date-cell">2013-05-20</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">35,559.09</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">Y</td>
+              <td class="NIGO Reason 1-cell"></td>
+              <td class="Resolved Date 1-cell"></td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell">Other</td>
+              <td class="Transfer Amount-cell">35.000</td>
+              <td class="Requested Date -cell">May 29, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">WAU & ASSOCIATES, INC.</td>
+              <td class="Sales Level 3-cell"></td>
+              <td class="Producer 1 Name-cell">JEFFREY B WIEDRICH</td>
+              <td class="Producer 1 Code-cell">411401</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">CORDOVA,  AGAPITO ORLANDO</td>
+              <td class="Case Number-cell">  28171477</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Arizona</td>
+              <td class="Application Received Date-cell">2013-05-06</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">203,811.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">Y</td>
+              <td class="NIGO Reason 1-cell"></td>
+              <td class="Resolved Date 1-cell"></td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell">American Equity</td>
+              <td class="Transfer Amount-cell">203.811</td>
+              <td class="Requested Date -cell">May 8, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">WAU & ASSOCIATES, INC.</td>
+              <td class="Sales Level 3-cell"></td>
+              <td class="Producer 1 Name-cell">JEFFREY B WIEDRICH</td>
+              <td class="Producer 1 Code-cell">411401</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr>
+              <td class="Client Name-cell">MEYER,  HELEN M</td>
+              <td class="Case Number-cell">  28171235</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Ohio</td>
+              <td class="Application Received Date-cell">2013-04-25</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">12,000.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">N</td>
+              <td class="NIGO Reason 1-cell">Below Minimum</td>
+              <td class="Resolved Date 1-cell">Apr 25, 2013</td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell"></td>
+              <td class="Transfer Company Name1-cell">Aviva</td>
+              <td class="Transfer Amount-cell">12.000</td>
+              <td class="Requested Date -cell">Apr 26, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">FINANCIAL INDEPENDENCE GROUP, INC.</td>
+              <td class="Sales Level 3-cell"></td>
+              <td class="Producer 1 Name-cell">CHARLES EDWARD NEUMAIER</td>
+              <td class="Producer 1 Code-cell">410262</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+            <tr class="lastRow">
+              <td class="Client Name-cell">BOYLES,  ALTA M</td>
+              <td class="Case Number-cell">  28171040</td>
+              <td class="Case Type-cell">EXCHANGE</td>
+              <td class="Issue State-cell">Ohio</td>
+              <td class="Application Received Date-cell">2013-04-17</td>
+              <td class="Product Name-cell">SECURE LIFESTYLE BONUS ANNUITY</td>
+              <td class="Estimated Deposit Amount-cell">141,500.00</td>
+              <td class="Suitability-cell">APPROVED</td>
+              <td class="IGO-cell">N</td>
+              <td class="NIGO Reason 1-cell">Rider</td>
+              <td class="Resolved Date 1-cell">Apr 23, 2013</td>
+              <td class="NIGO Reason 2-cell"></td>
+              <td class="Resolved Date 2-cell"></td>
+              <td class="NIGO Reason 3-cell"></td>
+              <td class="Resolved Date 3-cell"></td>
+              <td class="NIGO Reason 4-cell"></td>
+              <td class="Resolved Date 4-cell"></td>
+              <td class="NIGO Reason 5-cell"></td>
+              <td class="Resolved Date 5-cell"></td>
+              <td class="NIGO Notes-cell">NO COVERED PERSON IS ALLOWED OTHER THAN OWNER</td>
+              <td class="Transfer Company Name1-cell">Athene</td>
+              <td class="Transfer Amount-cell">70.000</td>
+              <td class="Requested Date -cell">Apr 29, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name2-cell">Athene</td>
+              <td class="Transfer Amount-cell">70.000</td>
+              <td class="Requested Date -cell">Apr 29, 2013</td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name3-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name4-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Transfer Company Name5-cell"></td>
+              <td class="Transfer Amount-cell"></td>
+              <td class="Requested Date -cell"></td>
+              <td class="Received Date -cell"></td>
+              <td class="Sales Level 1 -cell">ALTISURE GROUP LLC</td>
+              <td class="Sales Level 2-cell">ADVISORS EXCEL LLC</td>
+              <td class="Sales Level 3-cell">GREGORY GENTRY & ASSOCIATES</td>
+              <td class="Producer 1 Name-cell">JOSHUA DAVID GENTRY</td>
+              <td class="Producer 1 Code-cell">411503</td>
+              <td class="Producer 2 Name-cell"></td>
+              <td class="Producer 2 Code-cell"></td>
+              <td class="Producer 3 Name-cell"></td>
+              <td class="Producer 3 Code-cell"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div> 
+ 
+</body>
+</html>
